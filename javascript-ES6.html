@@ -90,19 +90,22 @@ paraula(...'bon dia');
 
 //EXERCICI 5
 
-
-
-
 function b() {
-   //...
+   return new Promise ((resolve,reject)=>{
+   setTimeout(() => {
+      console.log('saludar');
+      resolve();
+   }, 2000);
+});
 }
+
 async function a() {
-
-   await b(); 
-   doMoreWork();   
+await b().then (function doMoreWork(){
+   console.log("hola")   
+});
 }
 
-
+a()
 
 //EXERCICI 6
 
