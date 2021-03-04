@@ -100,9 +100,8 @@ function b() {
 }
 
 async function a() {
-await b().then (function doMoreWork(){
-   console.log("hola")   
-});
+let doMoreWork = await b();
+ console.log ("hola");  
 }
 
 a()
